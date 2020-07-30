@@ -5,12 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/swiper.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animate.css">
   <title>Салон красоты в Некрасовке Hairbox.</title>
 </head>
 
 <body>
+
+  <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+    <ul class="menu__box">
+      <li><a class="menu__item" href="#">Главная</a></li>
+      <li><a class="menu__item" href="#">Проекты</a></li>
+      <li><a class="menu__item" href="#">Команда</a></li>
+      <li><a class="menu__item" href="#">Блог</a></li>
+      <li><a class="menu__item" href="#">Контакты</a></li>
+    </ul>
+    <!-- <div class="menu__layer"></div> -->
+  </div>
 
   <header class="header">
     <div class="container">
@@ -30,18 +46,37 @@
         </a>
       </div>
     </div>
-    <div class="header__content">asdasdasdad</div>
+    <!-- <div class="header__content"> -->
+    <div class="swiper-container header__swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide header__slider">
+          <img src="img/header/hero_bg_1.jpg" alt="Header background Hairbox">
+          <div class="header__block">
+            <span class="header__subtitle">Добро пожаловать в салон красоты</span>
+            <h1 class="header__title">Hair-Box</h1>
+          </div>
+        </div>
+        <div class="swiper-slide header__slider" data-swiper-parallax="-200">
+          <img src="img/header/hero_bg_2.jpg" alt="Header background Hairbox">sdkjfhsdljkfndskjfn
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination header__pagination"></div>
+    </div>
+    <!-- </div> -->
   </header>
 
   <main>
-    <section class="content"></section>
+    fsv
+
   </main>
 
 
   <script src="js/jquery.js"></script>
   <!-- <script src="js/jquery.mask.min.js"></script> -->
   <script src="js/swiper.min.js"></script>
-  <script src="js/wow.min.js"></script>
+  <!-- <script src="js/wow.min.js"></script> -->
   <!-- <script src="js/jquery.validate.min.js"></script> -->
 
   <script src="js/main.js"></script>
