@@ -1,0 +1,230 @@
+.header
+  &__top
+    background-color: $green
+.list-top
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &__item
+    display: flex
+    align-items: center
+    padding: 1rem 1rem
+    color: #ffffff
+    font-size: 1.1rem
+    &:hover
+      background-color: $greenHover
+    &--email
+      position: relative
+      &:hover + .email-block
+        // display: block
+      &:before
+        content: ''
+        display: inline-block
+        width: 22px
+        height: 15px
+        margin-top: -0.3rem
+        margin-right: 0.3rem
+        background: url(../img/header/email.png) no-repeat center
+    &--tel
+      &:before
+        content: ''
+        width: 16px
+        height: 17px
+        margin-right: 0.3rem
+        display: inline-block
+        background: url('../img/header/tel.png') no-repeat center
+
+.email-block
+  display: none
+  position: absolute
+  top: 7.2%
+  padding: 1rem 2rem
+  border-radius: 20px
+  color: #fff
+  background-color: $black
+  cursor: pointer
+  &:hover
+    background-color: rgba($black, 0.9)
+
+.modal-phone
+  display: none
+  visibility: hidden
+  position: absolute
+  top: 45px
+  left: 0
+  right: 0
+  bottom: 0
+  width: 100%
+  height: calc(100%-50px)
+  display: flex
+  background-color: rgba($black, 0.3)
+  &__close
+    cursor: pointer
+    transition: all 1s
+    &::after, &::before
+      content: ''
+      position: absolute
+      top: 15px
+      right: 10px
+      display: inline-block
+      width: 18px
+      height: 2px
+      background-color: $gray
+    &::after
+      transform: rotate(50deg)
+    &:before
+      transform: rotate(-50deg)
+  &__block
+    position: relative
+    margin: 0 0 0 auto
+    padding: 2rem
+    max-width: 755px
+    width: 100%
+    min-width: 450px
+    background-color: #ffffff
+  &__row
+    align-items: flex-start
+    justify-content: space-between
+  &__contacts
+    width: 50%
+  &__form
+    width: 50%
+  &__tel
+    display: block
+    font-size: 1.714rem
+    color: $green
+    margin-bottom: 0.5rem
+    +font-RegularSemi
+  &__text
+    display: block
+    font-size: 1.142rem
+    color: $gray
+    margin-bottom: 2rem
+    +font-LightSemi
+  &__communication
+    display: block
+    font-size: 1.142rem
+    margin-bottom: 1rem
+  &__title
+    font-size: 1.714rem
+    margin: 0 0 0.5rem 0
+  &__description
+    margin: 0
+    font-size: 1.142rem
+    color: $gray
+    margin-bottom: 2rem
+    +font-LightSemi
+  &__input-name, &__input-phone
+    border: none
+    background-color: transparent
+    border-bottom: 1px solid $gray
+    padding: 0.5rem 0 0.5rem 0
+    margin-bottom: 1rem
+    transition: all 0.5s
+    &:focus
+      outline: none
+      border-bottom: 1px solid $orange
+  &__btn
+    width: 35%
+
+.list-social
+  &__item
+    display: flex
+    align-items: center
+    font-size: 1.285rem
+    color: $black
+    margin-bottom: 0.5rem
+    &:hover
+      text-decoration: underline
+    &:before
+      content: ''
+      display: inline-block
+      width: 30px
+      height: 30px
+      margin: 0
+      margin-right: 0.3rem
+    &--mob
+      &::before
+        background: url('../img/header/popup-tel.png') no-repeat center
+    &--viber
+      &::before
+        background: url('../img/header/viber.png') no-repeat center
+    &--telegram
+      &::before
+        background: url('../img/header/telegram.png') no-repeat center
+    &--whatsapp
+      &::before
+        background: url('../img/header/whatsapp.png') no-repeat center
+
+.form
+  display: flex
+  flex-direction: column
+
+.header
+  &__main
+    display: flex
+    justify-content: space-between
+  &__search
+    width: 50%
+    display: flex
+    flex-direction: row
+
+.search
+  &__category
+    position: relative
+    margin-bottom: 0.2rem
+    padding: 0.8rem 3rem 0.8rem 0.8rem
+    background: url('../img/header/tringle.png')no-repeat right 1rem top 50%
+    background-color: #f1f1f1
+    color: #777777
+    border: none
+    cursor: pointer
+    border-top-left-radius: 8px
+    border-bottom-left-radius: 8px
+    +font-RegularSemi
+    &:focus
+      outline: none
+  &__list
+    // display: none
+    // position: absolute
+    top: 0
+    left: 0
+    background-color: #f1f1f1
+    width: 200px
+    border-radius: 5px
+    padding: 1.142rem 1.07rem 2rem 1.07rem
+  &__list-item
+    font-size: 1.142rem
+    color: black
+    margin-bottom: 0.3rem
+    cursor: pointer
+    &:hover
+      color: $green
+    &--first
+      color: #777777
+      margin-bottom: 1.5rem
+      cursor: auto
+      &:hover
+        color: #777777
+  &__text
+    margin-left: -1px
+    padding: 0.8rem 3rem 0.8rem 0.8rem
+    max-width: 670px
+    width: 100%
+    border: none
+    background-color: #fff
+    &:focus
+      outline: none
+  &__submit
+    margin-left: -2px
+    padding: 1.6rem 3rem 1.17rem 1.6rem
+    background: url('../img/header/loop.png') no-repeat center
+    background-color: $orange
+    border: none
+    border-top-right-radius: 8px
+    border-bottom-right-radius: 8px
+    cursor: pointer
+    transition: all 0.5s
+    &:hover
+      background-color: #fdc05f
