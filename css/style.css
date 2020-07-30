@@ -339,11 +339,17 @@ template {
 [hidden] {
   display: none; }
 
+.container {
+  max-width: 1400px;
+  width: 97%;
+  margin: 0 auto;
+  padding: 0 10px; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
 html {
-  font-size: 44px; }
+  font-size: 14px; }
 
 body {
   font-size: 1rem;
@@ -361,22 +367,64 @@ ul {
 a {
   text-decoration: none; }
 
-.text1 {
-  font-family: 'Poppins Extra Light', sans-serif;
-  font-weight: 200; }
+body {
+  background-color: tomato; }
 
-.text2 {
-  font-family: 'Poppins Thin', sans-serif;
-  font-weight: 400; }
+.header {
+  background-color: #ffffff;
+  width: 100%; }
+  .header__top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    background-color: #ffffff; }
+  .header__logo {
+    opacity: 1;
+    cursor: pointer; }
+    .header__logo:hover {
+      opacity: 0.85; }
+  .header__social-link img {
+    opacity: 1; }
+    .header__social-link img:hover {
+      opacity: 0.7; }
+  .header__content {
+    background-color: blue;
+    margin-top: 6.5rem; }
 
-.text3 {
-  font-family: 'Poppins Semibold', sans-serif;
-  font-weight: 600; }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .navbar__item {
+    display: inline-block;
+    padding: 0.8rem;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-right: 0.5rem;
+    transition: color 0.2s;
+    font-family: 'Poppins Extra Light', sans-serif;
+    font-weight: 200; }
+    .navbar__item:last-child {
+      margin-right: 0; }
+    .navbar__item:hover {
+      color: #8ca0b5; }
+    .navbar__item--online {
+      padding: 1rem;
+      letter-spacing: normal;
+      background-color: #efc9d4;
+      transition: outline-offset 0.2s; }
+      .navbar__item--online:hover {
+        color: black;
+        background-color: #efbccb;
+        outline: 1px solid black;
+        outline-offset: 3px; }
 
-.text4 {
-  font-family: 'Playfair Display Regular', sans-serif;
-  font-weight: 400; }
-
-.text5 {
-  font-family: 'Playfair Display Bold', sans-serif;
-  font-weight: 600; }
+.content {
+  height: 900px; }

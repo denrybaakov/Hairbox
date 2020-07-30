@@ -1,10 +1,69 @@
-.text1
-  +Poppins-Extra
-.text2
-  +Poppins-Thin
-.text3
-  +Poppins-SemiBold
-.text4
-  +Playfair-Regular
-.text5
-  +Playfair-Bold
+// .text1
+//   +Poppins-Extra
+// .text2
+//   +Poppins-Thin
+// .text3
+//   +Poppins-SemiBold
+// .text4
+//   +Playfair-Regular
+// .text5
+//   +Playfair-Bold
+body
+  background-color: tomato
+.header
+  background-color: $light
+  width: 100%
+  &__top
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0.7rem 1.5rem
+    background-color: $light
+  &__logo
+    opacity: 1
+    cursor: pointer
+    &:hover
+      opacity: 0.85
+  &__social-link img
+    opacity: 1
+    &:hover
+      opacity: 0.7
+  &__content
+    background-color: blue
+    margin-top: 6.5rem
+
+.navbar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__item
+    display: inline-block
+    padding: 0.8rem
+    text-transform: uppercase
+    color: black
+    font-size: 1.1rem
+    letter-spacing: 1px
+    margin-right: 0.5rem
+    transition: color 0.2s
+    +Poppins-Extra
+    &:last-child
+      margin-right: 0
+    &:hover
+      color: $darkGray
+    &--online
+      padding: 1rem
+      letter-spacing: normal
+      background-color: $pink
+      transition: outline-offset 0.2s
+      &:hover
+        color: black
+        background-color: #efbccb
+        outline: 1px solid black
+        outline-offset: 3px
+
+.content
+  height: 900px
